@@ -1,7 +1,7 @@
 # Behavioral_Cloning
 Training a deep neural network to drive a simulated car. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
 ### Model Arcitecture 
 I Chose to use NVIDIA's model for autonomous cars, because if it workes for them then it is probably a good starting point. It consists of 4 convolutional layers with Rectified Linear Activation fucntions and 3 fully connected layers followed by the output layer. 
@@ -9,19 +9,19 @@ I Chose to use NVIDIA's model for autonomous cars, because if it workes for them
 The model contains dropout layers in order to reduce overfitting (model.py lines 104,106).
 
 The model was trained and validated on different data sets to ensure that the model was not overfitting (code line 50,51 or line 119 ). The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track.
-####3. Model parameter tuning
+#### Model parameter tuning
 
 The model used an adam optimizer, so the learning rate was not tuned manually (model.py line 111).
 
-####4. Appropriate training data
+#### Appropriate training data
 
 Training data was chosen to keep the vehicle driving on the road. I used a combination of center lane driving, recovering from the left and right sides of the road. I also recorded laps going counter-clockwise.  
 
 For details about how I created the training data, see the next section. 
 
-###Model Architecture and Training Strategy
+### Model Architecture and Training Strategy
 
-####1. Solution Design Approach
+#### Solution Design Approach
 
 To get the project up and running I initally tried the Lenet architecture that I used for sign classification, but this approach didn't seem to work well, so I studied the NVIDIA model from the lectures and settled upon using it. The only modification I made was introducing dropout between the first two fully connected layers. This helped with over fitting and seemed to smooth out some of the jerky steering learned from the provided data. 
 
@@ -29,7 +29,7 @@ The final step was to run the simulator to see how well the car was driving arou
 
 At the end of the process, the vehicle is able to drive autonomously around the track without leaving the road.
 
-####2. Final Model Architecture
+#### Final Model Architecture
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -51,7 +51,7 @@ My final model consisted of the following layers:
 ||
 | Output Layer | 
 
-####3. Creation of the Training Set & Training Process
+#### Creation of the Training Set & Training Process
 
 To capture good driving behavior, I first recorded three laps on track two using center lane driving.  One clockwise, and the other counterclockwise. The third lap focused on very slowly and smmotly going around corners. 
 
